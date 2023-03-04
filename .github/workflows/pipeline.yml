@@ -53,7 +53,7 @@ jobs:
       - name: Approve pull request
         uses: "uses: peter-evans/create-or-update-comment@v2.1.1"
         with:
-          token: "${{ secrets.YML_TOKEN }}"
+          token: "${{ secrets.PETER_EVANS_SECRET }}"
           message: "This pull request has been approved and can be merged."
           header: "Pull Request Approved"
         if: steps.check_approvals.outputs.approved == '0'
