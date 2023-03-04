@@ -51,7 +51,7 @@ jobs:
         shell: bash
 
       - name: Approve pull request
-        uses: "peter-evans/create-pull-request-comment@v3"
+        uses: "uses: peter-evans/create-or-update-comment@v2.1.1"
         with:
           token: "${{ secrets.YML_TOKEN }}"
           message: "This pull request has been approved and can be merged."
